@@ -25,7 +25,7 @@ public class HomePlugin extends JavaPlugin implements CommandExecutor {
         if (cmd.getName().equalsIgnoreCase("sethome")) {
             getConfig().set("homes." + uuid, player.getLocation());
             saveConfig();
-            player.sendMessage("§aHome wurde erfolgreich gesetzt!");
+            player.sendMessage("Home wurde erfolgreich gesetzt!");
             return true;
         }
 
@@ -34,9 +34,9 @@ public class HomePlugin extends JavaPlugin implements CommandExecutor {
             if (getConfig().contains("homes." + uuid)) {
                 Location loc = getConfig().getLocation("homes." + uuid);
                 player.teleport(loc);
-                player.sendMessage("§aTeleportiere zum Home...");
+                player.sendMessage("Teleportiere zum Home...");
             } else {
-                player.sendMessage("§cDu hast noch kein Home gesetzt!");
+                player.sendMessage("Du hast noch kein Home gesetzt!");
             }
             return true;
         }
